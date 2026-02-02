@@ -22,15 +22,32 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`lg:max-w-5xl md:max-w-3xl w-full h-14 py-8 flex items-center justify-between sticky top-0 z-50 transition-all duration-1000`}
+      className={`bg-white lg:max-w-5xl md:max-w-3xl w-full h-14 py-8 px-3 flex items-center justify-between sticky top-0 z-50 transition-all duration-1000`}
     >
-      {/* lg:px-30 md:px-20 sm:px-10 px-4 */}
-      <h1 className={`font-samsung-bold text-2xl flex items-center`}>
-        <img src={Logo} alt='logo' className={`w-10 h-10 `} />
-        HIDROPONIK
+      <h1
+        className={`relative group font-dm_sans-medium sm:pointer-events-none`}
+      >
+        <span className={`flex items-center font-bold text-2xl`}>
+          <img src={Logo} alt='logo' className={`w-10 h-10 `} />
+          HIDROPONIK
+        </span>
+        <div
+          className={`absolute left-2 bg-white rounded-md w-52 mt-2 border border-black/10 opacity-0 invisible transition-all duration-300 
+          
+          group-hover:opacity-100 group-hover:visible 
+          
+          *:list-none *:p-3 *:text-md *:hover:bg-gray-200 *:rounded-md`}
+        >
+          <li>Home</li>
+          <li>lorem</li>
+          <li>lorem</li>
+          <li>lorem</li>
+        </div>
       </h1>
       <div className={`flex items-center gap-5`}>
-        <ul className={`flex gap-6 font-samsung-medium text-sm`}>
+        <ul
+          className={`flex gap-6 font-dm_sans-medium opacity-0 invisible sm:opacity-100 sm:visible`}
+        >
           <li>Home</li>
           <li>lorem</li>
           <li>lorem</li>
@@ -39,7 +56,7 @@ export default function Navbar() {
         <div className={`relative group cursor-pointer mr-3`}>
           <RiUserLine
             size={22}
-            className={` bg-[#b4e069] w-7 h-7 p-2 text-2xl font-samsung-medium box-content rounded-full flex items-center justify-center`}
+            className={`bg-[#b4e069] w-7 h-7 p-2 text-2xl font-dm_sans-medium box-content rounded-full flex items-center justify-center`}
           />
           <div
             className={`absolute right-0 mt-2 w-52 rounded-md border border-black/10 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}

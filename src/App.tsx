@@ -2,19 +2,21 @@
 
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
+import Why from "./pages/Why";
 // import Card from "./components/Card";
 // import ImageList from "./components/ImageList";
-import Value from "./pages/Value";
 
 export default function App() {
   // const [count, setCount] = useState(0);
 
   return (
-    <div className={`min-h-screen w-full flex flex-col items-center`}>
+    <div
+      className={` font-dm_sans-medium min-h-screen w-full flex flex-col items-center`}
+    >
       <Navbar />
       <main className={`px-4 lg:max-w-5xl md:max-w-3xl w-full  `}>
         <Hero />
-        <Value />
+        <Why />
         {/* <ImageList /> */}
       </main>
     </div>
