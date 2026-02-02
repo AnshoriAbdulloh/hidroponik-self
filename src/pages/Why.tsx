@@ -1,7 +1,9 @@
 export default function Why() {
   return (
     <section className={` flex flex-col items-center mb-52`}>
-      <h1 className={`text-6xl pb-8`}>Why Hidroponik</h1>
+      <h1 className={`sm:text-6xl text-4xl text-center pb-8`}>
+        Why Hidroponik
+      </h1>
       <div
         className={`grid md:grid-cols-3 gap-2 *:max-w-122.5 *:rounded-md *:bg-[#def7e5] *:p-4 [&_p_h1]:text-2xl [&_p_h1]:w-full [&_p_h1]:text-center [&_p_h1]:pb-3`}
       >

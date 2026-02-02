@@ -1,6 +1,7 @@
 // import { useState } from "react";
 
 import Navbar from "./components/Navbar";
+import About from "./pages/About";
 import Hero from "./pages/Hero";
 import Why from "./pages/Why";
 // import Card from "./components/Card";
@@ -19,6 +20,7 @@ export default function App() {
         <Why />
         {/* <ImageList /> */}
       </main>
+      <About />
     </div>
   );
 }

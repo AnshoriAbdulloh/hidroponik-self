@@ -6,7 +6,7 @@ export default function Hero() {
       className={` flex lg:flex-row flex-col lg:h-[calc(100vh-56px)]  w-full py-5 mb-15 overflow-visible`}
     >
       <div className={`flex flex-col`}>
-        <h1 className={` text-7xl leading-tight `}>
+        <h1 className={`lg:text-7xl md:text-6xl text-5xl leading-tight `}>
           Great Man is Who Plants{" "}
           <span className={`text-[#84bd22]`}>Hidroponik</span>
         </h1>
@@ -21,11 +21,13 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <img
-        src={NatureHand}
-        alt='Hero Image'
-        className={` bg-center bg-contain bg-no-repeat max-w-125 mx-auto `}
-      />
+      <div className={`max-w-125 mx-auto aspect-square `}>
+        <img
+          src={NatureHand}
+          alt='Hero Image'
+          className={`w-full object-contain `}
+        />
+      </div>
     </section>
   );
 }
