@@ -3,6 +3,7 @@
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Hero from "./pages/Hero";
+import Plants from "./pages/Plants";
 import Why from "./pages/Why";
 // import Card from "./components/Card";
 // import ImageList from "./components/ImageList";
@@ -18,6 +19,7 @@ export default function App() {
       <main className={`px-4 lg:max-w-5xl md:max-w-3xl w-full  `}>
         <Hero />
         <Why />
+        <Plants />
         {/* <ImageList /> */}
       </main>
       <About />

@@ -3,7 +3,8 @@ import NatureHand from "../assets/img/natureHand.png";
 export default function Hero() {
   return (
     <section
-      className={` flex lg:flex-row flex-col lg:h-[calc(100vh-56px)]  w-full py-5 mb-15 overflow-visible`}
+      id='Hero'
+      className={` flex lg:flex-row flex-col lg:h-[calc(100vh-56px)]  w-full py-5 mb-5 overflow-visible`}
     >
       <div className={`flex flex-col`}>
         <h1 className={`lg:text-7xl md:text-6xl text-5xl leading-tight `}>

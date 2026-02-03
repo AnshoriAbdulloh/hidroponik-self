@@ -1,6 +1,6 @@
 export default function Why() {
   return (
-    <section className={` flex flex-col items-center mb-52`}>
+    <section id='Why' className={`border flex flex-col items-center py-4`}>
       <h1 className={`sm:text-6xl text-4xl text-center pb-8`}>
         Why Hidroponik
       </h1>
