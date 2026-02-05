@@ -74,19 +74,19 @@ export default function Navbar() {
           >
             <div className={`sm:hidden `}>
               <a
-                href='#'
+                href='#Hero'
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
                 <span>Home</span>
               </a>
               <a
-                href='#'
+                href='#Why'
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
                 <span>Why Hidroponik</span>
               </a>
               <a
-                href='#'
+                href='#About'
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
                 <span>About</span>

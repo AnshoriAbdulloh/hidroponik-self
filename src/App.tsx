@@ -13,10 +13,12 @@ export default function App() {
 
   return (
     <div
-      className={` font-dm_sans-medium min-h-screen w-full flex flex-col items-center`}
+      className={` font-dm_sans-medium min-h-screen w-full flex flex-col items-center *:transition-all *:duration-500`}
     >
       <Navbar />
-      <main className={`px-4 lg:max-w-5xl md:max-w-3xl w-full  `}>
+      <main
+        className={`flex flex-col gap-5 px-4 lg:max-w-5xl md:max-w-3xl w-full  `}
+      >
         <Hero />
         <Why />
         <Plants />

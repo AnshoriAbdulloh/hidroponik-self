@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section
       id='About'
-      className={`w-full grid place-items-center bg-black py-6 text-white text-lg`}
+      className={`w-full grid place-items-center bg-black py-6 mt-5 text-white text-lg`}
     >
       <div className={`px-6 lg:max-w-5xl md:max-w-3xl w-full`}>
         <div className={``}>

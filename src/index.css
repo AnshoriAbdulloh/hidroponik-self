@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 @font-face {
   font-family: samsung-bold;
   src: url(./assets/font/samsungsharpsans-bold.otf);
@@ -19,4 +23,13 @@
   --font-samsung-bold: samsung-bold;
   --font-samsung-medium: samsung-medium;
   --font-dm_sans-medium: dm_sans;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
 }
