@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-scroll";
 
 import { LuHeadset, LuSettings } from "react-icons/lu";
 import { RiUserLine } from "react-icons/ri";
@@ -47,14 +48,22 @@ export default function Navbar() {
         </span>
       </h1>
       <div className={`flex items-center gap-5`}>
-        <ul
+        <div
           className={`sm:flex hidden gap-6 font-dm_sans-medium opacity-0 invisible sm:opacity-100 sm:visible`}
         >
-          <li>Home</li>
-          <li>lorem</li>
-          <li>lorem</li>
-          <li>lorem</li>
-        </ul>
+          <Link to='Hero' smooth={true} duration={500} offset={-56}>
+            Home
+          </Link>
+          <Link to='Why' smooth={true} duration={500} offset={-56}>
+            Why
+          </Link>
+          <Link to='Plants' smooth={true} duration={500} offset={-60}>
+            Plants
+          </Link>
+          <Link to='About' smooth={true} duration={500} offset={-56}>
+            About
+          </Link>
+        </div>
         <div
           onClick={() => {
             setOpen(!open);
@@ -73,26 +82,44 @@ export default function Navbar() {
             group-hover:opacity-100 group-hover:visible`}
           >
             <div className={`sm:hidden `}>
-              <a
-                href='#Hero'
+              <Link
+                to='Hero'
+                smooth={true}
+                duration={500}
+                offset={-56}
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
                 <span>Home</span>
-              </a>
-              <a
-                href='#Why'
+              </Link>
+              <Link
+                to='Why'
+                smooth={true}
+                duration={500}
+                offset={-56}
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
                 <span>Why Hidroponik</span>
-              </a>
-              <a
-                href='#About'
+              </Link>
+              <Link
+                to='Plants'
+                smooth={true}
+                duration={500}
+                offset={-60}
+                className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
+              >
+                <span>Plants</span>
+              </Link>
+              <Link
+                to='About'
+                smooth={true}
+                duration={500}
+                offset={-56}
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
                 <span>About</span>
-              </a>
+              </Link>
             </div>
-            <hr className={`text-gray-300 m-2`} />
+            <hr className={`text-gray-300 m-2 sm:hidden`} />
             <a
               href='#'
               className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
