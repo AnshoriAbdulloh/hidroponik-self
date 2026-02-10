@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+// import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 
 import { LuHeadset, LuSettings } from "react-icons/lu";
 import { RiUserLine } from "react-icons/ri";
 
 import Logo from "../assets/img/logo.png";
+import LanguageDropdown from "./LanguageDropdown";
 
 export default function Navbar() {
   // const [scrolled, setScrolled] = useState(false);
@@ -20,6 +22,8 @@ export default function Navbar() {
   //   window.addEventListener(`scroll`, handleScroll);
   //   return () => window.removeEventListener(`scroll`, handleScroll);
   // }, []);
+
+  // const { t, i18n } = useTransition();
 
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -49,7 +53,7 @@ export default function Navbar() {
       </h1>
       <div className={`flex items-center gap-5`}>
         <div
-          className={`sm:flex hidden gap-6 font-dm_sans-medium opacity-0 invisible sm:opacity-100 sm:visible`}
+          className={`sm:flex hidden gap-6 font-dm_sans-medium opacity-0 invisible sm:opacity-100 sm:visible *:cursor-pointer *:hover:opacity-60`}
         >
           <Link to='Hero' smooth={true} duration={500} offset={-56}>
             Home
@@ -134,6 +138,7 @@ export default function Navbar() {
               <LuSettings size={22} />
               <span>Settings</span>
             </a>
+            <LanguageDropdown />
           </div>
         </div>
       </div>

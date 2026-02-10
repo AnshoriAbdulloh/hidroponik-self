@@ -1,0 +1,11 @@
+{
+    "nav":{
+        "home": "Beranda",
+        "why": "Kenapa",
+        "plants": "Tanaman",
+        "about": "Tentang"
+    },
+    "hero": {
+        "title": "M"
+    }
+}
