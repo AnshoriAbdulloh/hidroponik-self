@@ -14,20 +14,18 @@ export default function LanguageDropdown() {
         <span>Language</span>
       </a>
       <div
-        className={`${open ? `h-24.4` : `h-0`} pl-4 overflow-hidden transition-all duration-500 ease-in-out`}
+        className={`${open ? `h-24.5` : `h-0`} pl-4 overflow-hidden transition-all duration-500 ease-in-out`}
       >
-        <a
-          href='#'
+        <div
           className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
         >
           <span>Indonesia</span>
-        </a>
-        <a
-          href='#'
+        </div>
+        <div
           className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
         >
           <span>English</span>
-        </a>
+        </div>
       </div>
     </div>
   );
