@@ -1,1 +1,51 @@
-{}
+{
+  "navbar": {
+    "hello": "Halo",
+    "home": "Beranda",
+    "why": "Kenapa",
+    "plants": "Tanaman",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "settings": "Pengaturan",
+    "language": "Bahasa"
+  },
+
+  "hero": {
+    "title": "Orang hebat adalah ia yang menanam ",
+    "hydroponics": "Hidroponik",
+    "description": "Hidroponik adalah metode menanam yang menggunakan air untuk mengalirkan nutrisi ke tanaman; hal ini membuat tanaman menjadi lebih bersih untuk dikonsumsi",
+    "learnMore": "Pelajari lebih lanjut"
+  },
+
+  "why": {
+    "title": "Kenapa Hidroponik",
+    "grid": {
+      "1": {
+        "title": "Efisiensi Lahan",
+        "p": "Hidroponik memungkinkan budidaya tanaman tanpa tanah secara vertikal, menjadikannya solusi terbaik untuk berkebun di lahan sempit atau area perkotaan yang terbatas"
+      },
+      "2": {
+        "title": "Kualitas Nutrisi",
+        "p": "Karena nutrisi air dikontrol secara ketat dan minim penggunaan pestisida, sayuran yang dihasilkan jauh lebih bersih, renyah, dan aman dikonsumsi keluarga"
+      },
+      "3": {
+        "title": "Hemat Sumber Daya",
+        "p": " Metode ini menggunakan sistem sirkulasi yang menghemat penggunaan air hingga 90% dibandingkan pertanian konvensional, sehingga jauh lebih berkelanjutan"
+      }
+    }
+  },
+  "plants": {
+    "title": "Tanaman Terbaik"
+  },
+  "about": {
+    "title": {
+      "1": "Ayo buat sesuatu ",
+      "2": "Tumbuh ",
+      "3": "dengan ",
+      "4": "Hidroponik"
+    },
+    "contact": "Hubungi Kami",
+    "follow": "Ikuti Kami",
+    "address": "Alamat"
+  }
+}

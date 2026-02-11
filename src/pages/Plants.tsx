@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
+import { useTranslation } from "react-i18next";
 import { db } from "../firebase/firebase.ts";
 
 type ImageData = {
@@ -8,6 +9,7 @@ type ImageData = {
 };
 
 export default function Plants() {
+  const { t } = useTranslation();
   const [images, setImages] = useState<ImageData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -51,7 +53,7 @@ export default function Plants() {
   return (
     <section id='Plants' className={``}>
       <h1 className={`md:text-6xl sm:text-5xl text-4xl text-center pb-8`}>
-        Best Plants
+        {t("plants.title")}
       </h1>
       <div
         className={` lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 sm:grid flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-4`}

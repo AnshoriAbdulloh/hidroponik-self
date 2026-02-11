@@ -9,8 +9,11 @@ import { IoMailOutline } from "react-icons/io5";
 import { LuSmilePlus } from "react-icons/lu";
 import { MdOutlinePhone } from "react-icons/md";
 import { SiGooglemaps } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section
       id='About'
@@ -19,17 +22,17 @@ export default function About() {
       <div className={`px-6 lg:max-w-5xl md:max-w-3xl w-full`}>
         <div className={``}>
           <LuSmilePlus className={`inline mr-2`} size={25} />
-          Lets make something <span className={`text-[#84bd22]`}>
-            Grow
-          </span>{" "}
-          with <span className={`text-[#84bd22]`}>Hidroponik</span>
+          {t("about.title.1")}{" "}
+          <span className={`text-[#84bd22]`}>{t("about.title.2")}</span>
+          {t("about.title.3")}{" "}
+          <span className={`text-[#84bd22]`}>{t("about.title.4")}</span>
         </div>
         <hr className={`my-6`} />
         <div className={`flex flex-wrap gap-4 justify-between *:mb-4`}>
           <div
             className={`flex flex-col text-[15px] *:mb-3 [&_span_svg]:inline [&_span_svg]:mr-2`}
           >
-            <h1 className={`mb-2 text-lg`}>Contact Us</h1>
+            <h1 className={`mb-2 text-lg`}>{t("about.contact")}</h1>
             <span>
               <IoMailOutline size={20} /> ahonk.hidroponik@gmail.com
             </span>
@@ -44,7 +47,7 @@ export default function About() {
             <div
               className={`flex flex-col text-[15px] *:mb-3 [&_span_svg]:inline [&_span_svg]:mr-2`}
             >
-              <h1 className={`mb-2 text-lg`}>Follow Us</h1>
+              <h1 className={`mb-2 text-lg`}>{t("about.follow")}</h1>
               <span>
                 <FaGithub size={20} />
                 <a href='https://github.com/AnshoriAbdulloh'>AnshoriAbdulloh</a>
@@ -65,7 +68,7 @@ export default function About() {
             <div
               className={`flex flex-col text-[15px] *:mb-3 [&_span_svg]:inline [&_span_svg]:mr-2`}
             >
-              <h1 className={`mb-2 text-lg`}>Addresses</h1>
+              <h1 className={`mb-2 text-lg`}>{t("about.address")}</h1>
               <span>
                 <SiGooglemaps size={20} />{" "}
                 <a href='https://www.google.com/maps/place/Jakarta,+Daerah+Khusus+Ibukota+Jakarta/@-6.2297465,106.829518,11z/data=!3m1!4b1!4m6!3m5!1s0x2e69f3e945e34b9d:0x5371bf0fdad786a2!8m2!3d-6.1944491!4d106.8229198!16zL20vMDQ0cnY?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D'>

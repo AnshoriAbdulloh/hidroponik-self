@@ -1,11 +1,49 @@
 {
-    "nav":{
-        "home": "Beranda",
-        "why": "Kenapa",
-        "plants": "Tanaman",
-        "about": "Tentang"
-    },
-    "hero": {
-        "title": "M"
+  "navbar": {
+    "hello": "Hello",
+    "home": "Home",
+    "why": "Why",
+    "plants": "Plants",
+    "about": "About",
+    "contact": "Contact Person",
+    "settings": "Settings",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Great peaple is one who grows ",
+    "hydroponics": "Hydroponics",
+    "description": "Hydroponics is a planting method that uses water to deliver nutrients to plants. This method ensures that the plants are cleaner for consumption",
+    "learnMore": "Learn more"
+  },
+  "why": {
+    "title": "Why Hydroponic",
+    "grid": {
+      "1": {
+        "title": "Land Efficiency",
+        "p": "Hydroponics allows for vertical, soil-less plant cultivation, making it the best solution for gardening in narrow spaces or limited urban areas"
+      },
+      "2": {
+        "title": "Nutritional Quality",
+        "p": "Because water nutrients are strictly controlled and pesticide use is minimized, the resulting vegetables are much cleaner, crispier, and safer for family consumption"
+      },
+      "3": {
+        "title": "Resource Efficiency",
+        "p": "This method uses a circulation system that saves up to 90% more water compared to conventional farming, making it far more sustainable"
+      }
     }
+  },
+  "plants": {
+    "title": "Best Plants"
+  },
+  "about": {
+    "title": {
+      "1": "Lets make something ",
+      "2": "Grow ",
+      "3": "with ",
+      "4": "Hydroponic"
+    },
+    "contact": "Contact Us",
+    "follow": "Follow Us",
+    "address": "Address"
+  }
 }

@@ -1,12 +1,14 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 // import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
+import { UserContext } from "../context/UserContext";
+import { useTranslation } from "react-i18next";
 
 import { LuHeadset, LuSettings } from "react-icons/lu";
 import { RiUserLine } from "react-icons/ri";
+import { IoLanguageOutline } from "react-icons/io5";
 
 import Logo from "../assets/img/logo.png";
-import LanguageDropdown from "./LanguageDropdown";
 
 export default function Navbar() {
   // const [scrolled, setScrolled] = useState(false);
@@ -25,6 +27,8 @@ export default function Navbar() {
 
   // const { t, i18n } = useTransition();
 
+  const { t, i18n } = useTranslation();
+  const user = useContext(UserContext);
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -56,16 +60,16 @@ export default function Navbar() {
           className={`sm:flex hidden gap-6 font-dm_sans-medium opacity-0 invisible sm:opacity-100 sm:visible *:cursor-pointer *:hover:opacity-60`}
         >
           <Link to='Hero' smooth={true} duration={500} offset={-56}>
-            Home
+            {t("navbar.home")}
           </Link>
           <Link to='Why' smooth={true} duration={500} offset={-56}>
-            Why
+            {t("navbar.why")}
           </Link>
           <Link to='Plants' smooth={true} duration={500} offset={-60}>
-            Plants
+            {t("navbar.plants")}
           </Link>
           <Link to='About' smooth={true} duration={500} offset={-56}>
-            About
+            {t("navbar.about")}
           </Link>
         </div>
         <div
@@ -85,6 +89,13 @@ export default function Navbar() {
             absolute right-0 mt-2 w-52 rounded-md border border-black/10 bg-white opacity-0 invisible transition-all duration-300
             group-hover:opacity-100 group-hover:visible`}
           >
+            <div className={``}>
+              <h1 className={`p-3`}>
+                {t("navbar.hello")} {user}
+              </h1>
+              <hr className={`mx-2 text-gray-300`} />
+            </div>
+
             <div className={`sm:hidden `}>
               <Link
                 to='Hero'
@@ -93,7 +104,7 @@ export default function Navbar() {
                 offset={-56}
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
-                <span>Home</span>
+                <span>{t("navbar.home")}</span>
               </Link>
               <Link
                 to='Why'
@@ -102,7 +113,7 @@ export default function Navbar() {
                 offset={-56}
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
-                <span>Why Hidroponik</span>
+                <span>{t("navbar.why")}</span>
               </Link>
               <Link
                 to='Plants'
@@ -111,7 +122,7 @@ export default function Navbar() {
                 offset={-60}
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
-                <span>Plants</span>
+                <span>{t("navbar.plants")}</span>
               </Link>
               <Link
                 to='About'
@@ -120,7 +131,7 @@ export default function Navbar() {
                 offset={-56}
                 className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
               >
-                <span>About</span>
+                <span>{t("navbar.about")}</span>
               </Link>
             </div>
             <hr className={`text-gray-300 m-2 sm:hidden`} />
@@ -129,16 +140,44 @@ export default function Navbar() {
               className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
             >
               <LuHeadset size={21} />
-              <span>Contact Person</span>
+              <span>{t("navbar.contact")}</span>
             </a>
             <a
               href='#'
               className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
             >
               <LuSettings size={22} />
-              <span>Settings</span>
+              <span>{t("navbar.settings")}</span>
             </a>
-            <LanguageDropdown />
+            <div>
+              <a
+                href='#'
+                className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
+                onClick={(e) => {
+                  setOpen(!open);
+                  e.preventDefault();
+                }}
+              >
+                <IoLanguageOutline size={22} />
+                <span>{t("navbar.language")}</span>
+              </a>
+              <div
+                className={`${open ? `h-24.5` : `h-0`} pl-4 overflow-hidden transition-all duration-500 ease-in-out`}
+              >
+                <div
+                  onClick={() => i18n.changeLanguage("id")}
+                  className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
+                >
+                  <span>Indonesia</span>
+                </div>
+                <div
+                  onClick={() => i18n.changeLanguage("id")}
+                  className={`flex items-center gap-2 p-3 rounded-md hover:bg-gray-200`}
+                >
+                  <span>English</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

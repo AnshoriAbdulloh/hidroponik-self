@@ -1,6 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 import NatureHand from "../assets/img/natureHand.png";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section
       id='Hero'
@@ -8,17 +12,13 @@ export default function Hero() {
     >
       <div className={`flex flex-col`}>
         <h1 className={`lg:text-7xl md:text-6xl text-5xl leading-tight `}>
-          Great Man is Who Plants{" "}
-          <span className={`text-[#84bd22]`}>Hidroponik</span>
+          {t("hero.title")}
+          <span className={`text-[#84bd22]`}>{t("hero.hydroponics")}</span>
         </h1>
-        <p className={`pl-1 py-3`}>
-          Hidroponik is a metode planting that using water to gave and flow the
-          nutrition for plant, this rather to made plant clean for someone
-          eating.
-        </p>
+        <p className={`pl-1 py-3`}>{t("hero.description")}</p>
         <div className={`pl-1 pb-3 mt-auto`}>
           <button className={`bg-[#84bd22] p-3 px-5 rounded-md`}>
-            Learn More
+            {t("hero.learnMore")}
           </button>
         </div>
       </div>
